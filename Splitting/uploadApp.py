@@ -42,6 +42,10 @@ def home():
 def reels():
     return render_template("reels.html", likes=likes, dislikes=dislikes)
 
+@app.route('/uploadS3')
+def upload_to_S3():
+    return render_template("s3.html")
+
 
 @app.route('/likes_dislikes', methods = ['POST'])
 def get_post_javascript_data():
